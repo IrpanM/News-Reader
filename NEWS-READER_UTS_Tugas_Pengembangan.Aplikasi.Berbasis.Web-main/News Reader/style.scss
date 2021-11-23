@@ -1,0 +1,1012 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+:root {
+  --main-white-color: white;
+  --main-black-color: black;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+}
+
+header {
+  position: absolute;
+  z-index: 10;
+  // box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 0.2);
+  width: 100%;
+
+  nav {
+    padding: 5px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    .list {
+      display: flex;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.26);
+
+      .kiri {
+        margin: 15px;
+
+        a {
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: bold;
+          color: white;
+        }
+      }
+
+      .kanan {
+        ul {
+          display: flex;
+          margin-left: 540px;
+
+          li {
+            list-style-type: none;
+            margin: 15px;
+
+            a {
+              text-decoration: none;
+              font-size: 14px;
+              font-weight: bold;
+              color: white;
+              outline: none;
+
+              &::after {
+                display: block;
+                content: '';
+                border-bottom: solid 2px white;
+                transform: scaleX(0);
+                transition: 0.2s ease-in-out;
+                transform-origin: 0% 50%;
+              }
+
+              &:hover::after {
+                transform: scaleX(1);
+              }
+
+              &:focus {
+                border-bottom: 2px solid white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.static {
+  position: static;
+}
+
+.cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.owl-carousel .owl-slide {
+  position: relative;
+  height: 100vh;
+  background-color: lightgray;
+}
+
+.owl-carousel .owl-slide-animated {
+  transform: translateX(20px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.05s;
+}
+
+.owl-carousel .owl-slide-animated.is-transitioned {
+  transform: none;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+
+.owl-carousel .owl-slide-title.is-transitioned {
+  transition-delay: 0.2s;
+}
+
+.owl-carousel .owl-slide-subtitle.is-transitioned {
+  transition-delay: 0.35s;
+}
+
+.owl-carousel .owl-slide-cta.is-transitioned {
+  transition-delay: 0.5s;
+}
+
+.owl-carousel .owl-dots,
+.owl-carousel .owl-nav {
+  position: absolute;
+}
+
+.owl-carousel .owl-dots .owl-dot,
+.owl-carousel .owl-nav [class*='owl-']:focus {
+  outline: none;
+}
+
+.owl-carousel .owl-dots .owl-dot span {
+  background: transparent;
+  border: 1px solid var(--main-black-color);
+  transition: all 0.2s ease;
+}
+
+.owl-carousel .owl-dots .owl-dot:hover span,
+.owl-carousel .owl-dots .owl-dot.active span {
+  background: var(--main-black-color);
+}
+
+.owl-carousel .owl-nav {
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+.owl-carousel .owl-nav svg {
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.owl-carousel .owl-nav button:hover svg {
+  opacity: 1;
+}
+
+.owl-carousel .owl-nav [class*='owl-']:hover {
+  background: transparent;
+}
+
+section {
+  display: none;
+}
+
+.container {
+  padding-top: 200px;
+  padding-left: 600px;
+
+  .isi {
+    background-color: rgba(255, 255, 255, 0.459);
+    width: 100vh;
+    border-radius: 10px;
+    padding: 40px;
+
+    .static {
+      .text {
+        h2 {
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+
+        .owl-slide-subtitle {
+          margin-bottom: 20px;
+        }
+
+        a {
+          background-color: rgb(0, 60, 109);
+          border: 1.5px solid rgb(0, 60, 109);
+          color: white;
+          text-decoration: none;
+          padding: 10px;
+          border-radius: 5px;
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.582);
+            color: rgb(0, 60, 109);
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  .content {
+    margin-top: 50px;
+    margin-bottom: 100px;
+
+    .title {
+      text-align: center;
+      margin-bottom: 25px;
+
+      h1 {
+        font-size: 35px;
+        margin-bottom: 5px;
+      }
+
+      hr {
+        color: rgb(0, 60, 109);
+        width: 50px;
+        border: 2px solid rgb(0, 60, 109);
+        margin: 0 auto;
+      }
+    }
+
+    .padding {
+      padding: 0 100px 0 100px;
+
+      .pertama {
+        margin-bottom: 40px;
+
+        .judul {
+          margin-bottom: 20px;
+        }
+
+        .isi {
+          display: flex;
+
+          .kiri {
+            width: 350px;
+            margin-right: 25px;
+
+            a {
+              .gambar {
+                margin-bottom: 10px;
+                background: url('https://akcdn.detik.net.id/community/media/visual/2019/10/13/9b40dec0-d94f-482a-ab89-06d46d84c94d_43.jpeg?w=700&q=80');
+                height: 30vh;
+                background-size: cover;
+                background-repeat: no-repeat;
+                border-radius: 10px;
+
+                &:hover {
+                  opacity: 0.8;
+                }
+
+                // img {
+                //     border-radius: 10px;
+                //     width: 350px;
+                // }
+              }
+            }
+
+            a {
+              color: black;
+
+              h3 {
+                margin-bottom: 10px;
+              }
+
+              &:hover {
+                color: #2985ca;
+              }
+            }
+
+            a {
+              text-decoration: none;
+
+              p {
+                color: rgb(0, 60, 109);
+                font-weight: bold;
+                width: 110px;
+
+                &::after {
+                  display: block;
+                  content: '';
+                  border-bottom: solid 2px rgb(0, 60, 109);
+                  transform: scaleX(0);
+                  transition: 0.2s ease-in-out;
+                  transform-origin: 0% 50%;
+                }
+
+                &:hover::after {
+                  transform: scaleX(1);
+                }
+
+                &:focus {
+                  color: black;
+                  border-bottom: 2px solid rgb(0, 60, 109);
+                }
+              }
+            }
+          }
+
+          .tengah {
+            width: 350px;
+            margin-right: 25px;
+
+            a {
+              .gambar {
+                margin-bottom: 10px;
+                background: url('https://akcdn.detik.net.id/community/media/visual/2021/01/27/anthony-sinisuka-ginting_169.jpeg?w=700&q=80');
+                height: 30vh;
+                background-size: cover;
+                background-repeat: no-repeat;
+                border-radius: 10px;
+
+                &:hover {
+                  opacity: 0.8;
+                }
+
+                // img {
+                //     border-radius: 10px;
+                //     width: 350px;
+                // }
+              }
+            }
+
+            a {
+              color: black;
+
+              h3 {
+                margin-bottom: 10px;
+              }
+
+              &:hover {
+                color: #2985ca;
+              }
+            }
+
+            a {
+              text-decoration: none;
+
+              p {
+                color: rgb(0, 60, 109);
+                font-weight: bold;
+                width: 110px;
+
+                &::after {
+                  display: block;
+                  content: '';
+                  border-bottom: solid 2px rgb(0, 60, 109);
+                  transform: scaleX(0);
+                  transition: 0.2s ease-in-out;
+                  transform-origin: 0% 50%;
+                }
+
+                &:hover::after {
+                  transform: scaleX(1);
+                }
+
+                &:focus {
+                  color: black;
+                  border-bottom: 2px solid rgb(0, 60, 109);
+                }
+              }
+            }
+          }
+
+          .kanan {
+            width: 350px;
+
+            a {
+              .gambar {
+                margin-bottom: 10px;
+                background: url('https://akcdn.detik.net.id/community/media/visual/2020/08/01/lin-jarvis-yamaha_169.jpeg?w=700&q=80');
+                height: 30vh;
+                background-size: cover;
+                background-repeat: no-repeat;
+                border-radius: 10px;
+
+                &:hover {
+                  opacity: 0.8;
+                }
+
+                // img {
+                //     border-radius: 10px;
+                //     width: 350px;
+                // }
+              }
+            }
+
+            a {
+              color: black;
+
+              h3 {
+                margin-bottom: 10px;
+              }
+
+              &:hover {
+                color: #2985ca;
+              }
+            }
+
+            a {
+              text-decoration: none;
+
+              p {
+                color: rgb(0, 60, 109);
+                font-weight: bold;
+                width: 110px;
+
+                &::after {
+                  display: block;
+                  content: '';
+                  border-bottom: solid 2px rgb(0, 60, 109);
+                  transform: scaleX(0);
+                  transition: 0.2s ease-in-out;
+                  transform-origin: 0% 50%;
+                }
+
+                &:hover::after {
+                  transform: scaleX(1);
+                }
+
+                &:focus {
+                  color: black;
+                  border-bottom: 2px solid rgb(0, 60, 109);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .kedua {
+        margin-bottom: 40px;
+
+        .judul {
+          margin-bottom: 20px;
+        }
+
+        .isi {
+          display: flex;
+
+          .kiri {
+            width: 530px;
+            margin-right: 35px;
+
+            a {
+              .gambar {
+                margin-bottom: 10px;
+                background: url('https://asset.kompas.com/crops/l-hZdRyW_Xe17rZ4LYxOVfdS0Fk=/0x0:585x390/750x500/data/photo/2016/10/27/1536558cyber-crime-police780x390.jpg');
+                height: 35vh;
+                background-size: cover;
+                background-repeat: no-repeat;
+                border-radius: 10px;
+
+                &:hover {
+                  opacity: 0.8;
+                }
+
+                // img {
+                //     border-radius: 10px;
+                //     width: 350px;
+                // }
+              }
+            }
+
+            a {
+              color: black;
+
+              h3 {
+                margin-bottom: 10px;
+              }
+
+              &:hover {
+                color: #2985ca;
+              }
+            }
+
+            a {
+              text-decoration: none;
+
+              p {
+                color: rgb(0, 60, 109);
+                font-weight: bold;
+                width: 110px;
+
+                &::after {
+                  display: block;
+                  content: '';
+                  border-bottom: solid 2px rgb(0, 60, 109);
+                  transform: scaleX(0);
+                  transition: 0.2s ease-in-out;
+                  transform-origin: 0% 50%;
+                }
+
+                &:hover::after {
+                  transform: scaleX(1);
+                }
+
+                &:focus {
+                  color: black;
+                  border-bottom: 2px solid rgb(0, 60, 109);
+                }
+              }
+            }
+          }
+
+          .kanan {
+            width: 530px;
+
+            a {
+              .gambar {
+                margin-bottom: 10px;
+                background: url('https://akcdn.detik.net.id/visual/2018/06/26/7598e30b-7c84-402d-b4fd-4454da2ff651_169.jpeg?w=650');
+                height: 35vh;
+                background-size: cover;
+                background-repeat: no-repeat;
+                border-radius: 10px;
+
+                &:hover {
+                  opacity: 0.8;
+                }
+
+                // img {
+                //     border-radius: 10px;
+                //     width: 350px;
+                // }
+              }
+            }
+
+            a {
+              color: black;
+
+              h3 {
+                margin-bottom: 10px;
+              }
+
+              &:hover {
+                color: #2985ca;
+              }
+            }
+
+            a {
+              text-decoration: none;
+
+              p {
+                color: rgb(0, 60, 109);
+                font-weight: bold;
+                width: 110px;
+
+                &::after {
+                  display: block;
+                  content: '';
+                  border-bottom: solid 2px rgb(0, 60, 109);
+                  transform: scaleX(0);
+                  transition: 0.2s ease-in-out;
+                  transform-origin: 0% 50%;
+                }
+
+                &:hover::after {
+                  transform: scaleX(1);
+                }
+
+                &:focus {
+                  color: black;
+                  border-bottom: 2px solid rgb(0, 60, 109);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .ketiga {
+        .judul {
+          margin-bottom: 20px;
+        }
+
+        .isi {
+          .atas {
+            display: flex;
+            margin-bottom: 20px;
+
+            .kiri {
+              .gambar {
+                margin-right: 25px;
+
+                img {
+                  width: 350px;
+                  border-radius: 5px;
+                }
+              }
+            }
+
+            .kanan {
+              h2 {
+                margin-top: 15px;
+                text-align: center;
+                margin-bottom: 15px;
+              }
+
+              p {
+                line-height: 1.5;
+              }
+            }
+          }
+
+          .link {
+            p {
+              text-align: center;
+
+              a {
+                background-color: rgb(0, 60, 109);
+                border: 1.5px solid rgb(0, 60, 109);
+                color: white;
+                text-decoration: none;
+                padding: 7.5px;
+                border-radius: 5px;
+                margin: 0 auto;
+
+                &:hover {
+                  background-color: rgba(255, 255, 255, 0.582);
+                  color: rgb(0, 60, 109);
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .list {
+        margin-top: 50px;
+        width: 760px;
+
+        .judul {
+          margin-bottom: 20px;
+          border-bottom: 1px solid rgb(82, 82, 82);
+          padding-bottom: 10px;
+        }
+
+        .isi {
+          .berita-isi {
+            display: flex;
+            margin-bottom: 20px;
+
+            .gambar {
+              img {
+                width: 200px;
+                border-radius: 5px;
+              }
+            }
+
+            .deskripsi {
+              margin-left: 20px;
+              border-bottom: 1px solid rgba(168, 167, 167, 0.774);
+              width: 100%;
+
+              .atas-deskripsi {
+                height: 100px;
+
+                a {
+                  text-decoration: none;
+                  color: black;
+
+                  p {
+                    font-size: 26px;
+                  }
+
+                  &:hover {
+                    color: rgb(0, 141, 235);
+                  }
+                }
+              }
+
+              .bawah-deskripsi {
+                p {
+                  color: brown;
+                  font-weight: 600;
+                }
+              }
+            }
+          }
+        }
+
+        .more {
+          a {
+            text-decoration: none;
+            color: black;
+
+            &:hover {
+              color: rgb(0, 141, 235);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .profile {
+    background-color: #0b2447;
+    padding: 50px 150px 50px 150px;
+    display: flex;
+
+    .kiri-profile {
+      width: 500px;
+
+      h1 {
+        font-size: 40px;
+        color: white;
+      }
+    }
+
+    .kanan-profile {
+      padding: 0 50px 0 100px;
+
+      .kanan-atas {
+        margin-bottom: 15px;
+
+        p {
+          font-size: 16px;
+          color: white;
+          line-height: 1.5;
+        }
+      }
+
+      .kanan-bawah {
+        display: flex;
+
+        .kiri {
+          img {
+            width: 75px;
+            border-radius: 100px;
+          }
+        }
+
+        .kanan {
+          margin-top: 10px;
+          margin-left: 20px;
+
+          .nama {
+            margin-bottom: 5px;
+            color: rgb(1, 141, 255);
+          }
+
+          .skill {
+            font-size: 18px;
+            color: rgb(172, 169, 169);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  .owl-carousel .owl-nav {
+    top: 35%;
+  }
+
+  .owl-carousel .owl-nav svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px) and (min-resolution: 2dppx), screen and (min-width: 401px) and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 2) {
+  .owl-carousel .owl-nav {
+    top: 35%;
+  }
+
+  .owl-carousel .owl-nav svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 767px) and (min-resolution: 2dppx), screen and (min-width: 601px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
+  .owl-carousel .owl-nav {
+    top: 30%;
+  }
+
+  .owl-carousel .owl-nav svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px) and (min-resolution: 2dppx), screen and (min-width: 768px) and (max-width: 1000px) and (-webkit-min-device-pixel-ratio: 2) {
+  .owl-carousel .owl-nav {
+    top: 25%;
+  }
+
+  .owl-carousel .owl-nav svg {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+footer {
+  padding: 50px 50px 0px 50px;
+  background-color: #111c2b;
+
+  .atas {
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgb(161, 161, 161);
+    display: flex;
+
+    .kiri {
+      width: 40%;
+
+      .judul {
+        margin-bottom: 25px;
+
+        h1 {
+          color: #fff;
+        }
+      }
+
+      .about {
+        margin-bottom: 25px;
+        color: rgb(201, 197, 197);
+        line-height: 2;
+      }
+
+      .sosmed {
+        ul {
+          display: flex;
+          padding-left: 0;
+
+          li {
+            list-style-type: none;
+            margin-right: 15px;
+
+            a {
+              opacity: 0.5;
+              outline: none;
+
+              &:hover {
+                opacity: 1;
+              }
+
+              &:focus {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .kanan {
+      // display: flex;
+      padding: 0 0 0 150px;
+
+      .contact {
+        .judul {
+          margin-bottom: 25px;
+
+          h2 {
+            color: white;
+          }
+        }
+
+        .row {
+          p {
+            text-transform: uppercase;
+            font-size: 15px;
+            color: white;
+
+            span {
+              color: rgb(235, 51, 51);
+            }
+          }
+
+          input {
+            width: 500px;
+            border: none;
+            border-bottom: 1.5px solid rgba(114, 113, 113, 0.884);
+            height: 30px;
+            outline: none;
+            background: none;
+            color: white;
+
+            &:focus {
+              border-bottom: 1.5px solid white;
+            }
+
+            &:hover {
+              border-bottom: 1.5px solid white;
+            }
+          }
+
+          .message {
+            width: 100%;
+            border: none;
+            border-bottom: 1.5px solid rgba(114, 113, 113, 0.884);
+            height: 30px;
+            outline: none;
+
+            &:focus {
+              border-bottom: 1px solid white;
+            }
+          }
+        }
+
+        .tombol {
+          margin-top: 35px;
+          margin-bottom: 20px;
+          border-radius: 2px;
+
+          a {
+            text-decoration: none;
+            background: linear-gradient(to right, rgb(0, 93, 109), rgb(0, 60, 109));
+            color: white;
+            font-size: 11px;
+            padding: 10px;
+            padding-left: 35px;
+            padding-right: 35px;
+            border-radius: 2px;
+          }
+        }
+      }
+
+      // .company {
+      //     padding: 0 50px 0 50px;
+
+      //     .judul {
+      //         margin-bottom: 35px;
+
+      //         h3 {
+      //             color: white;
+      //         }
+      //     }
+
+      //     .list {
+      //         ul {
+      //             padding-left: 0;
+
+      //             li {
+      //                 list-style-type: none;
+      //                 margin-bottom: 20px;
+
+      //                 a {
+      //                     text-decoration: none;
+      //                     color: rgb(201, 197, 197);
+
+      //                     &:hover {
+      //                         color: white;
+      //                     }
+      //                 }
+      //             }
+      //         }
+      //     }
+      // }
+
+      // .contact {
+      //     padding: 0 50px 0 50px;
+
+      //     .judul {
+      //         margin-bottom: 35px;
+
+      //         h3 {
+      //             color: white;
+      //         }
+      //     }
+
+      //     .list {
+      //         ul {
+      //             padding-left: 0;
+
+      //             li {
+      //                 list-style-type: none;
+      //                 margin-bottom: 20px;
+
+      //                 a {
+      //                     text-decoration: none;
+      //                     color: rgb(201, 197, 197);
+
+      //                     &:hover {
+      //                         color: rgb(63, 184, 153);
+      //                     }
+      //                 }
+
+      //                 p {
+      //                     color: rgb(201, 197, 197);
+      //                 }
+      //             }
+      //         }
+      //     }
+      // }
+    }
+  }
+
+  .bawah {
+    padding: 20px;
+
+    .text {
+      color: rgb(161, 161, 161);
+      text-align: center;
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}

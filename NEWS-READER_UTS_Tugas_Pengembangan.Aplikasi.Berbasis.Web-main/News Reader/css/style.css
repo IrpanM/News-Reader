@@ -1,0 +1,925 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+:root {
+  --main-white-color: white;
+  --main-black-color: black;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+}
+
+header {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+}
+
+header nav {
+  padding: 5px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+header nav .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.26);
+}
+
+header nav .list .kiri {
+  margin: 15px;
+}
+
+header nav .list .kiri a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+
+header nav .list .kanan ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 540px;
+}
+
+header nav .list .kanan ul li {
+  list-style-type: none;
+  margin: 15px;
+}
+
+header nav .list .kanan ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  outline: none;
+}
+
+header nav .list .kanan ul li a::after {
+  display: block;
+  content: '';
+  border-bottom: solid 2px white;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+}
+
+header nav .list .kanan ul li a:hover::after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+header nav .list .kanan ul li a:focus {
+  border-bottom: 2px solid white;
+}
+
+.static {
+  position: static;
+}
+
+.cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.owl-carousel .owl-slide {
+  position: relative;
+  height: 100vh;
+  background-color: lightgray;
+}
+
+.owl-carousel .owl-slide-animated {
+  -webkit-transform: translateX(20px);
+  transform: translateX(20px);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.05s;
+  transition: all 0.05s;
+}
+
+.owl-carousel .owl-slide-animated.is-transitioned {
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.owl-carousel .owl-slide-title.is-transitioned {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.owl-carousel .owl-slide-subtitle.is-transitioned {
+  -webkit-transition-delay: 0.35s;
+  transition-delay: 0.35s;
+}
+
+.owl-carousel .owl-slide-cta.is-transitioned {
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.owl-carousel .owl-dots,
+.owl-carousel .owl-nav {
+  position: absolute;
+}
+
+.owl-carousel .owl-dots .owl-dot,
+.owl-carousel .owl-nav [class*='owl-']:focus {
+  outline: none;
+}
+
+.owl-carousel .owl-dots .owl-dot span {
+  background: transparent;
+  border: 1px solid var(--main-black-color);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.owl-carousel .owl-dots .owl-dot:hover span,
+.owl-carousel .owl-dots .owl-dot.active span {
+  background: var(--main-black-color);
+}
+
+.owl-carousel .owl-nav {
+  left: 50%;
+  top: 10%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+.owl-carousel .owl-nav svg {
+  opacity: 0.3;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.owl-carousel .owl-nav button:hover svg {
+  opacity: 1;
+}
+
+.owl-carousel .owl-nav [class*='owl-']:hover {
+  background: transparent;
+}
+
+section {
+  display: none;
+}
+
+.container {
+  padding-top: 200px;
+  padding-left: 600px;
+}
+
+.container .isi {
+  background-color: rgba(255, 255, 255, 0.459);
+  width: 100vh;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.container .isi .static .text h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.container .isi .static .text .owl-slide-subtitle {
+  margin-bottom: 20px;
+}
+
+.container .isi .static .text a {
+  background-color: #003c6d;
+  border: 1.5px solid #003c6d;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.container .isi .static .text a:hover {
+  background-color: rgba(255, 255, 255, 0.582);
+  color: #003c6d;
+  font-weight: bold;
+}
+
+main .content {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+main .content .title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+main .content .title h1 {
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+
+main .content .title hr {
+  color: #003c6d;
+  width: 50px;
+  border: 2px solid #003c6d;
+  margin: 0 auto;
+}
+
+main .content .padding {
+  padding: 0 100px 0 100px;
+}
+
+main .content .padding .pertama {
+  margin-bottom: 40px;
+}
+
+main .content .padding .pertama .judul {
+  margin-bottom: 20px;
+}
+
+main .content .padding .pertama .isi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .content .padding .pertama .isi .kiri {
+  width: 350px;
+  margin-right: 25px;
+}
+
+main .content .padding .pertama .isi .kiri a .gambar {
+  margin-bottom: 10px;
+  background: url('https://akcdn.detik.net.id/community/media/visual/2019/10/13/9b40dec0-d94f-482a-ab89-06d46d84c94d_43.jpeg?w=700&q=80');
+  height: 30vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+main .content .padding .pertama .isi .kiri a .gambar:hover {
+  opacity: 0.8;
+}
+
+main .content .padding .pertama .isi .kiri a {
+  color: black;
+}
+
+main .content .padding .pertama .isi .kiri a h3 {
+  margin-bottom: 10px;
+}
+
+main .content .padding .pertama .isi .kiri a:hover {
+  color: #2985ca;
+}
+
+main .content .padding .pertama .isi .kiri a {
+  text-decoration: none;
+}
+
+main .content .padding .pertama .isi .kiri a p {
+  color: #003c6d;
+  font-weight: bold;
+  width: 110px;
+}
+
+main .content .padding .pertama .isi .kiri a p::after {
+  display: block;
+  content: '';
+  border-bottom: solid 2px #003c6d;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+}
+
+main .content .padding .pertama .isi .kiri a p:hover::after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+main .content .padding .pertama .isi .kiri a p:focus {
+  color: black;
+  border-bottom: 2px solid #003c6d;
+}
+
+main .content .padding .pertama .isi .tengah {
+  width: 350px;
+  margin-right: 25px;
+}
+
+main .content .padding .pertama .isi .tengah a .gambar {
+  margin-bottom: 10px;
+  background: url('https://akcdn.detik.net.id/community/media/visual/2021/01/27/anthony-sinisuka-ginting_169.jpeg?w=700&q=80');
+  height: 30vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+main .content .padding .pertama .isi .tengah a .gambar:hover {
+  opacity: 0.8;
+}
+
+main .content .padding .pertama .isi .tengah a {
+  color: black;
+}
+
+main .content .padding .pertama .isi .tengah a h3 {
+  margin-bottom: 10px;
+}
+
+main .content .padding .pertama .isi .tengah a:hover {
+  color: #2985ca;
+}
+
+main .content .padding .pertama .isi .tengah a {
+  text-decoration: none;
+}
+
+main .content .padding .pertama .isi .tengah a p {
+  color: #003c6d;
+  font-weight: bold;
+  width: 110px;
+}
+
+main .content .padding .pertama .isi .tengah a p::after {
+  display: block;
+  content: '';
+  border-bottom: solid 2px #003c6d;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+}
+
+main .content .padding .pertama .isi .tengah a p:hover::after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+main .content .padding .pertama .isi .tengah a p:focus {
+  color: black;
+  border-bottom: 2px solid #003c6d;
+}
+
+main .content .padding .pertama .isi .kanan {
+  width: 350px;
+}
+
+main .content .padding .pertama .isi .kanan a .gambar {
+  margin-bottom: 10px;
+  background: url('https://akcdn.detik.net.id/community/media/visual/2020/08/01/lin-jarvis-yamaha_169.jpeg?w=700&q=80');
+  height: 30vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+main .content .padding .pertama .isi .kanan a .gambar:hover {
+  opacity: 0.8;
+}
+
+main .content .padding .pertama .isi .kanan a {
+  color: black;
+}
+
+main .content .padding .pertama .isi .kanan a h3 {
+  margin-bottom: 10px;
+}
+
+main .content .padding .pertama .isi .kanan a:hover {
+  color: #2985ca;
+}
+
+main .content .padding .pertama .isi .kanan a {
+  text-decoration: none;
+}
+
+main .content .padding .pertama .isi .kanan a p {
+  color: #003c6d;
+  font-weight: bold;
+  width: 110px;
+}
+
+main .content .padding .pertama .isi .kanan a p::after {
+  display: block;
+  content: '';
+  border-bottom: solid 2px #003c6d;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+}
+
+main .content .padding .pertama .isi .kanan a p:hover::after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+main .content .padding .pertama .isi .kanan a p:focus {
+  color: black;
+  border-bottom: 2px solid #003c6d;
+}
+
+main .content .padding .kedua {
+  margin-bottom: 40px;
+}
+
+main .content .padding .kedua .judul {
+  margin-bottom: 20px;
+}
+
+main .content .padding .kedua .isi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .content .padding .kedua .isi .kiri {
+  width: 530px;
+  margin-right: 35px;
+}
+
+main .content .padding .kedua .isi .kiri a .gambar {
+  margin-bottom: 10px;
+  background: url('https://asset.kompas.com/crops/l-hZdRyW_Xe17rZ4LYxOVfdS0Fk=/0x0:585x390/750x500/data/photo/2016/10/27/1536558cyber-crime-police780x390.jpg');
+  height: 35vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+main .content .padding .kedua .isi .kiri a .gambar:hover {
+  opacity: 0.8;
+}
+
+main .content .padding .kedua .isi .kiri a {
+  color: black;
+}
+
+main .content .padding .kedua .isi .kiri a h3 {
+  margin-bottom: 10px;
+}
+
+main .content .padding .kedua .isi .kiri a:hover {
+  color: #2985ca;
+}
+
+main .content .padding .kedua .isi .kiri a {
+  text-decoration: none;
+}
+
+main .content .padding .kedua .isi .kiri a p {
+  color: #003c6d;
+  font-weight: bold;
+  width: 110px;
+}
+
+main .content .padding .kedua .isi .kiri a p::after {
+  display: block;
+  content: '';
+  border-bottom: solid 2px #003c6d;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+}
+
+main .content .padding .kedua .isi .kiri a p:hover::after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+main .content .padding .kedua .isi .kiri a p:focus {
+  color: black;
+  border-bottom: 2px solid #003c6d;
+}
+
+main .content .padding .kedua .isi .kanan {
+  width: 530px;
+}
+
+main .content .padding .kedua .isi .kanan a .gambar {
+  margin-bottom: 10px;
+  background: url('https://akcdn.detik.net.id/visual/2018/06/26/7598e30b-7c84-402d-b4fd-4454da2ff651_169.jpeg?w=650');
+  height: 35vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+main .content .padding .kedua .isi .kanan a .gambar:hover {
+  opacity: 0.8;
+}
+
+main .content .padding .kedua .isi .kanan a {
+  color: black;
+}
+
+main .content .padding .kedua .isi .kanan a h3 {
+  margin-bottom: 10px;
+}
+
+main .content .padding .kedua .isi .kanan a:hover {
+  color: #2985ca;
+}
+
+main .content .padding .kedua .isi .kanan a {
+  text-decoration: none;
+}
+
+main .content .padding .kedua .isi .kanan a p {
+  color: #003c6d;
+  font-weight: bold;
+  width: 110px;
+}
+
+main .content .padding .kedua .isi .kanan a p::after {
+  display: block;
+  content: '';
+  border-bottom: solid 2px #003c6d;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+}
+
+main .content .padding .kedua .isi .kanan a p:hover::after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+main .content .padding .kedua .isi .kanan a p:focus {
+  color: black;
+  border-bottom: 2px solid #003c6d;
+}
+
+main .content .padding .ketiga .judul {
+  margin-bottom: 20px;
+}
+
+main .content .padding .ketiga .isi .atas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+main .content .padding .ketiga .isi .atas .kiri .gambar {
+  margin-right: 25px;
+}
+
+main .content .padding .ketiga .isi .atas .kiri .gambar img {
+  width: 350px;
+  border-radius: 5px;
+}
+
+main .content .padding .ketiga .isi .atas .kanan h2 {
+  margin-top: 15px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+main .content .padding .ketiga .isi .atas .kanan p {
+  line-height: 1.5;
+}
+
+main .content .padding .ketiga .isi .link p {
+  text-align: center;
+}
+
+main .content .padding .ketiga .isi .link p a {
+  background-color: #003c6d;
+  border: 1.5px solid #003c6d;
+  color: white;
+  text-decoration: none;
+  padding: 7.5px;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+main .content .padding .ketiga .isi .link p a:hover {
+  background-color: rgba(255, 255, 255, 0.582);
+  color: #003c6d;
+  font-weight: bold;
+}
+
+main .content .padding .list {
+  margin-top: 50px;
+  width: 760px;
+}
+
+main .content .padding .list .judul {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #525252;
+  padding-bottom: 10px;
+}
+
+main .content .padding .list .isi .berita-isi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+main .content .padding .list .isi .berita-isi .gambar img {
+  width: 200px;
+  border-radius: 5px;
+}
+
+main .content .padding .list .isi .berita-isi .deskripsi {
+  margin-left: 20px;
+  border-bottom: 1px solid rgba(168, 167, 167, 0.774);
+  width: 100%;
+}
+
+main .content .padding .list .isi .berita-isi .deskripsi .atas-deskripsi {
+  height: 100px;
+}
+
+main .content .padding .list .isi .berita-isi .deskripsi .atas-deskripsi a {
+  text-decoration: none;
+  color: black;
+}
+
+main .content .padding .list .isi .berita-isi .deskripsi .atas-deskripsi a p {
+  font-size: 26px;
+}
+
+main .content .padding .list .isi .berita-isi .deskripsi .atas-deskripsi a:hover {
+  color: #008deb;
+}
+
+main .content .padding .list .isi .berita-isi .deskripsi .bawah-deskripsi p {
+  color: brown;
+  font-weight: 600;
+}
+
+main .content .padding .list .more a {
+  text-decoration: none;
+  color: black;
+}
+
+main .content .padding .list .more a:hover {
+  color: #008deb;
+}
+
+main .profile {
+  background-color: #0b2447;
+  padding: 50px 150px 50px 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .profile .kiri-profile {
+  width: 500px;
+}
+
+main .profile .kiri-profile h1 {
+  font-size: 40px;
+  color: white;
+}
+
+main .profile .kanan-profile {
+  padding: 0 50px 0 100px;
+}
+
+main .profile .kanan-profile .kanan-atas {
+  margin-bottom: 15px;
+}
+
+main .profile .kanan-profile .kanan-atas p {
+  font-size: 16px;
+  color: white;
+  line-height: 1.5;
+}
+
+main .profile .kanan-profile .kanan-bawah {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .profile .kanan-profile .kanan-bawah .kiri img {
+  width: 75px;
+  border-radius: 100px;
+}
+
+main .profile .kanan-profile .kanan-bawah .kanan {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+main .profile .kanan-profile .kanan-bawah .kanan .nama {
+  margin-bottom: 5px;
+  color: #018dff;
+}
+
+main .profile .kanan-profile .kanan-bawah .kanan .skill {
+  font-size: 18px;
+  color: #aca9a9;
+}
+
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  .owl-carousel .owl-nav {
+    top: 35%;
+  }
+  .owl-carousel .owl-nav svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 401px) and (max-width: 600px) and (min-resolution: 2dppx) {
+  .owl-carousel .owl-nav {
+    top: 35%;
+  }
+  .owl-carousel .owl-nav svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 601px) and (max-width: 767px) and (min-resolution: 2dppx) {
+  .owl-carousel .owl-nav {
+    top: 30%;
+  }
+  .owl-carousel .owl-nav svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1000px) and (min-resolution: 2dppx) {
+  .owl-carousel .owl-nav {
+    top: 25%;
+  }
+  .owl-carousel .owl-nav svg {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+footer {
+  padding: 50px 50px 0px 50px;
+  background-color: #111c2b;
+}
+
+footer .atas {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #a1a1a1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .atas .kiri {
+  width: 40%;
+}
+
+footer .atas .kiri .judul {
+  margin-bottom: 25px;
+}
+
+footer .atas .kiri .judul h1 {
+  color: #fff;
+}
+
+footer .atas .kiri .about {
+  margin-bottom: 25px;
+  color: #c9c5c5;
+  line-height: 2;
+}
+
+footer .atas .kiri .sosmed ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+}
+
+footer .atas .kiri .sosmed ul li {
+  list-style-type: none;
+  margin-right: 15px;
+}
+
+footer .atas .kiri .sosmed ul li a {
+  opacity: 0.5;
+  outline: none;
+}
+
+footer .atas .kiri .sosmed ul li a:hover {
+  opacity: 1;
+}
+
+footer .atas .kiri .sosmed ul li a:focus {
+  opacity: 1;
+}
+
+footer .atas .kanan {
+  padding: 0 0 0 150px;
+}
+
+footer .atas .kanan .contact .judul {
+  margin-bottom: 25px;
+}
+
+footer .atas .kanan .contact .judul h2 {
+  color: white;
+}
+
+footer .atas .kanan .contact .row p {
+  text-transform: uppercase;
+  font-size: 15px;
+  color: white;
+}
+
+footer .atas .kanan .contact .row p span {
+  color: #eb3333;
+}
+
+footer .atas .kanan .contact .row input {
+  width: 500px;
+  border: none;
+  border-bottom: 1.5px solid rgba(114, 113, 113, 0.884);
+  height: 30px;
+  outline: none;
+  background: none;
+  color: white;
+}
+
+footer .atas .kanan .contact .row input:focus {
+  border-bottom: 1.5px solid white;
+}
+
+footer .atas .kanan .contact .row input:hover {
+  border-bottom: 1.5px solid white;
+}
+
+footer .atas .kanan .contact .row .message {
+  width: 100%;
+  border: none;
+  border-bottom: 1.5px solid rgba(114, 113, 113, 0.884);
+  height: 30px;
+  outline: none;
+}
+
+footer .atas .kanan .contact .row .message:focus {
+  border-bottom: 1px solid white;
+}
+
+footer .atas .kanan .contact .tombol {
+  margin-top: 35px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+
+footer .atas .kanan .contact .tombol a {
+  text-decoration: none;
+  background: -webkit-gradient(linear, left top, right top, from(#005d6d), to(#003c6d));
+  background: linear-gradient(to right, #005d6d, #003c6d);
+  color: white;
+  font-size: 11px;
+  padding: 10px;
+  padding-left: 35px;
+  padding-right: 35px;
+  border-radius: 2px;
+}
+
+footer .bawah {
+  padding: 20px;
+}
+
+footer .bawah .text {
+  color: #a1a1a1;
+  text-align: center;
+}
+
+footer .bawah .text p {
+  font-size: 14px;
+}
+/*# sourceMappingURL=style.css.map */
